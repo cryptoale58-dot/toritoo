@@ -98,15 +98,6 @@
 
         .featured-img { width: 100%; display: block; object-fit: cover; }
 
-        .badge {
-            position: absolute;
-            top: 15px; left: 15px;
-            color: white; padding: 4px 12px;
-            font-size: 0.7rem; font-weight: 800;
-            border-radius: 6px;
-            z-index: 10;
-        }
-
         /* --- BOTONES Y VIDEOS --- */
         .btn {
             position: relative; overflow: hidden;
@@ -133,6 +124,15 @@
             overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
         }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        /* --- GRID DE TIKTOK --- */
+        .tiktok-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            width: 100%;
+        }
 
         footer {
             background-color: var(--footer-bg); color: #888; padding: 60px 20px; text-align: center;
@@ -180,34 +180,44 @@
             </div>
         </div>
 
-    <div id="tiktok" class="section-card">
-        <div class="premium-grid">
-            <div class="img-wrapper">
-                <img src="torito-tt.jpg" alt="MrTorito TikTok" class="featured-img">
+        <div id="tiktok" class="section-card">
+            <div class="premium-grid">
+                <div class="img-wrapper">
+                    <img src="torito-tt.jpg" alt="MrTorito TikTok" class="featured-img">
+                </div>
+                <div>
+                    <h2 style="margin-top:0;">El Mercado es una Locura</h2>
+                    <p>Dominamos las tendencias antes de que ocurran. Transforma tus vistas en una comunidad de toros fieles.</p>
+                    <a href="https://www.tiktok.com/@mrtorito_2" target="_blank" class="btn btn-tt">
+                        SÍGUEME EN TIKTOK
+                    </a>
+                </div>
             </div>
-            <div>
-                <h2 style="margin-top:0;">El Mercado es una Locura</h2>
-                <p>Dominamos las tendencias antes de que ocurran. Transforma tus vistas en una comunidad de toros fieles.</p>
-                <a href="https://www.tiktok.com/@mrtorito_2" target="_blank" class="btn btn-tt">
-                    SÍGUEME EN TIKTOK
-                </a>
+
+            <div class="tiktok-grid">
+                <blockquote class="tiktok-embed" 
+                    cite="https://www.tiktok.com/@mrtorito_2/video/7600956522163686676" 
+                    data-video-id="7600956522163686676" 
+                    style="width: 100%; min-width: 325px; margin: 0;"> 
+                    <section> 
+                        <a target="_blank" title="@mrtorito_2" href="https://www.tiktok.com/@mrtorito_2?refer=embed">@mrtorito_2</a> 
+                        <p>Cargando video de Bull Academy...</p> 
+                    </section> 
+                </blockquote> 
+
+                <blockquote class="tiktok-embed" 
+                    cite="https://www.tiktok.com/@mrtorito_2/video/7601364939294412048" 
+                    data-video-id="7601364939294412048" 
+                    style="width: 100%; min-width: 325px; margin: 0;"> 
+                    <section> 
+                        <a target="_blank" title="@mrtorito_2" href="https://www.tiktok.com/@mrtorito_2?refer=embed">@mrtorito_2</a> 
+                        <p>Cargando nuevo video...</p> 
+                    </section> 
+                </blockquote> 
             </div>
-        </div>
 
-        <div style="display: flex; justify-content: center; width: 100%; overflow: hidden; border-radius: 20px;">
-            <blockquote class="tiktok-embed" 
-                cite="https://www.tiktok.com/@mrtorito_2/video/7600956522163686676" 
-                data-video-id="7600956522163686676" 
-                style="width: 100%; min-width: 325px; max-width: 600px; margin: 0 auto;"> 
-                <section> 
-                    <a target="_blank" title="@mrtorito_2" href="https://www.tiktok.com/@mrtorito_2?refer=embed">@mrtorito_2</a> 
-                    <p>Cargando video de Bull Academy...</p> 
-                </section> 
-            </blockquote> 
+            <script async src="https://www.tiktok.com/embed.js"></script>
         </div>
-
-        <script async src="https://www.tiktok.com/embed.js"></script>
-    </div>
 
         <div id="sobre-nosotros" class="section-card" style="border: none; background: transparent;">
             <div class="premium-grid">
